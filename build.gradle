@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "socialnetwork.tweetterm.App"
+sourceCompatibility = 1.8
+version = '1.0'
+
+run{
+    standardInput = System.in
+}
+
+repositories {
+    mavenCentral()
+}
+
+task wrapper(type: Wrapper){
+    gradleVersion = "2.3"
+}
+
+dependencies {
+    testCompile "junit:junit:4+"
+    testCompile "org.mockito:mockito-core:1.+"
+}
